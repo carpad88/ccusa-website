@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "@antfu",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": [
+    "tailwindcss"
+  ],
+  "settings": {
+    "tailwindcss": {
+      "config": "tailwind.config.ts"
+    }
+  },
+  "rules": {
+  }
+}
