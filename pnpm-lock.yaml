@@ -17,6 +17,9 @@ devDependencies:
   eslint:
     specifier: ^8.41.0
     version: 8.41.0
+  eslint-plugin-tailwindcss:
+    specifier: ^3.12.1
+    version: 3.12.1(tailwindcss@3.3.2)
   nuxt:
     specifier: ^3.5.2
     version: 3.5.2(@types/node@18.0.0)(eslint@8.41.0)(typescript@5.0.4)(vue-tsc@1.6.5)
@@ -2784,6 +2787,17 @@ packages:
       eslint: ^7.0.0 || ^8.0.0
     dependencies:
       eslint: 8.41.0
+    dev: true
+
+  /eslint-plugin-tailwindcss@3.12.1(tailwindcss@3.3.2):
+    resolution: {integrity: sha512-LyIRV0rx6prTpJZsSCXSNJ34Yry3Nj9OJwvzh1xTsiG6+UCnAPW1Bx41s7vZzUDKMlwFgpUN9Me+NK12T4DHYg==}
+    engines: {node: '>=12.13.0'}
+    peerDependencies:
+      tailwindcss: ^3.3.2
+    dependencies:
+      fast-glob: 3.2.12
+      postcss: 8.4.24
+      tailwindcss: 3.3.2
     dev: true
 
   /eslint-plugin-unicorn@47.0.0(eslint@8.41.0):
