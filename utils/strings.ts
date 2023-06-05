@@ -1,5 +1,7 @@
 import { format, isDate, parseISO } from 'date-fns'
-import { es } from 'date-fns/locale'
+
+// @ts-expect-error date-fns is not esm
+import { es } from 'date-fns/locale/index.js'
 
 const DateFormats = {
   Short: 'MMMM d, yyyy',
@@ -9,7 +11,9 @@ const DateFormats = {
 export type DateFormatsNames = keyof typeof DateFormats
 
 export function formatDate(date?: any, pattern: DateFormatsNames = 'Short') {
-  if (!date) return ''
-  if (isDate(date)) return format(date, DateFormats[pattern])
+  if (!date)
+    return ''
+  if (isDate(date))
+    return format(date, DateFormats[pattern])
   return format(parseISO(date), DateFormats[pattern], { locale: es })
 }
